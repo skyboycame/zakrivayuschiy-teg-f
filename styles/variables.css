@@ -6,7 +6,7 @@
   --main-font-weight-title: 700;
   --main-font-weight-text: 400;
   --content-bg-color: #ffffff;
-  --text-button-color: #fff;
+  --text-button-color: #ffffff;
   --container-inline-size: clamp(20.1875rem, 13.4554rem + 33.6607vw, 43.75rem);
   --accent-color: #000000;
   --header-title-size: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
