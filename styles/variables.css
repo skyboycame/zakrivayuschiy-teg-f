@@ -1,1 +1,31 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --main-font: "Inter";
+  --accent-font: "PressStart2P";
+  --main-font-weight-title: 700;
+  --main-font-weight-text: 400;
+  --content-bg-color: #ffffff;
+  --text-button-color: #fff;
+  --container-inline-size: clamp(20.1875rem, 13.4554rem + 33.6607vw, 43.75rem);
+  --accent-color: #000000;
+  --header-title-size: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
+  --header-subtitle-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
+  --header-padding-r-l: clamp(0.875rem, -1.0179rem + 9.4643vw, 7.5rem);
+  --padding-card-text: 25px;
+  --padding-card-title-pc: 3px 10px;
+  --padding-card-title-mb: 6px 10px;
+  --padding-like-button: 12.5px 37px;
+  --padding-safe-button-pc: 18.5px 21px;
+  --padding-safe-button-mb: 15px 20px;
+  --label-opacity: 0.5;
+  --text-shadow-color: #fff;
+  --padding-dialog: 30px;
+  --padding-dialog-button: 12.5px 0;
+  --backdrop-bg-color: rgb(0 0 0 / 0.75);
+  --to-left-gradiend: -90deg, #d3d3d3 0 2px, transparent 2px 4px;
+  --to-bottom-gradient: 0deg, #d3d3d3 0 2px, transparent 2px 4px;
+  --to-top-gradiend: to top, #e7e7e7, #1a1a1a;
+  --contour-color: #000;
+  --animation-fill-color: red;
+}
