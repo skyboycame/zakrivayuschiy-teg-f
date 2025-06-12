@@ -192,7 +192,7 @@
   animation: hoverTranslate 0.5s ease-in-out;
 }
 
-.button:not(:hover)::before {
+.button::before {
   animation: hoverTranslateOut 0.5s ease-in-out forwards;
 }
 
@@ -212,6 +212,7 @@
   margin-block-end: 105px;
   padding: var(--padding-safe-button-pc);
   background-color: var(--content-bg-color);
+  color: white;
   cursor: pointer;
 }
 
@@ -220,7 +221,8 @@
   top: 0;
   left: 0;
   z-index: 1;
-  stroke: var(--text-button-color);
+  stroke: var(--content-bg-color); 
+  /* при fill просто дискета пропадает */
   mix-blend-mode: difference;
 }
 
