@@ -26,6 +26,6 @@
   --to-left-gradiend: -90deg, #d3d3d3 0 2px, transparent 2px 4px;
   --to-bottom-gradient: 0deg, #d3d3d3 0 2px, transparent 2px 4px;
   --to-top-gradiend: to top, #e7e7e7, #1a1a1a;
-  --contour-color: #000;
+  --contour-color: #000000;
   --animation-fill-color: red;
 }
