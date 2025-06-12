@@ -128,19 +128,9 @@
   transition: fill 0.3s ease;
 }
 
-.card__icon-button .core {
-  fill: transparent;
-  transition: fill 0.3s ease 0.03s;
-}
-
 .card__icon-button:active .main-body {
   fill: var(--animation-fill-color);
   transition: fill 0.3s ease 0.05s;
-}
-
-.card__icon-button .main-body {
-  fill: transparent;
-  transition: fill 0.3s ease;
 }
 
 .like-icon.is-liked .core {
@@ -259,7 +249,7 @@
 .card__text-desc {
   margin-block-start: -4px;
   border-block-start: 2px solid var(--accent-color);
-}
+} 
 
 .card__image-container {
   position: relative;

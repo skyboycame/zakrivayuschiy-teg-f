@@ -13,17 +13,16 @@
 @keyframes hoverTranslate {
   0% {
     transform: translateX(-100%);
-   
   }
   100% {
     transform: translateX(0);
   }
 }
 
-@keyframes hoverTranslateOut{
+@keyframes hoverTranslateOut {
+  
   0% {
     transform: translateX(0);
-   
   }
   100% {
     transform: translateX(-100%);
@@ -49,4 +48,3 @@
     opacity: 1;
   }
 }
-
