@@ -186,14 +186,11 @@
   transform: translateX(0);
   inline-size: 100%;
   block-size: 100%;
+  animation: hoverTranslateOut 0.5s ease-in-out forwards;
 }
 
 .button:hover::before {
   animation: hoverTranslate 0.5s ease-in-out;
-}
-
-.button::before {
-  animation: hoverTranslateOut 0.5s ease-in-out forwards;
 }
 
 .button__text {
