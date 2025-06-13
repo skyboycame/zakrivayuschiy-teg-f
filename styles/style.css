@@ -325,7 +325,6 @@
   flex-direction: column;
   margin-block-end: 389px;
   padding: var(--padding-dialog);
-  opacity: 0.5;
   block-size: 20vh;
   inline-size: 37vh;
 }
