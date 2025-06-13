@@ -19,7 +19,10 @@
   background-image: repeating-linear-gradient(var(--to-left-gradiend)),
     repeating-linear-gradient(var(--to-bottom-gradient)),
     linear-gradient(var(--to-top-gradiend));
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--main-font-weight-text);
@@ -34,20 +37,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 102px 0;
+  margin: 112px 0;
   border: 2px solid var(--accent-color);
   padding: 128px var(--header-padding-r-l);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   background-color: var(--content-bg-color);
 }
 
 .header__title {
   padding-bottom: 20px;
   font-size: var(--header-title-size);
+  text-transform: uppercase;
 }
 
 .header__subtitle {
   font-size: var(--header-subtitle-size);
+  text-transform: uppercase;
 }
 
 .main {
@@ -59,6 +64,10 @@
 .lots__card-list-item {
   margin-block-end: 52px;
   border: 2px solid var(--accent-color);
+}
+
+.lots__card-list-item:last-child {
+  margin-block-end: 45px;
 }
 
 .button {
@@ -73,7 +82,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 12px;
+  gap: 1px;
   padding: var(--padding-card-text);
 }
 
@@ -84,6 +93,9 @@
 }
 
 .card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-self: center;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -94,7 +106,7 @@
 }
 
 .card__icon-button:focus-visible {
-  padding: 1px 6px 0 6px;
+  padding: 2.5px;
   outline: 2px solid var(--accent-color);
   transition: outline 0.3s ease;
 }
@@ -149,6 +161,7 @@
 }
 
 .like-icon.is-liked .heart {
+  transform-origin: center;
   animation: scaleAnimation 0.3s ease-in 1 0.1s;
 }
 
@@ -161,6 +174,7 @@
   justify-content: center;
   align-items: center;
   padding: var(--padding-like-button);
+  font-size: 14px;
   inline-size: 130px;
 }
 
@@ -184,9 +198,9 @@
   left: 0;
   background-color: var(--accent-color);
   transform: translateX(0);
+  animation: hoverTranslateOut 0.5s ease-in-out forwards;
   inline-size: 100%;
   block-size: 100%;
-  animation: hoverTranslateOut 0.5s ease-in-out forwards;
 }
 
 .button:hover::before {
@@ -208,8 +222,9 @@
   gap: 8px;
   margin-block-end: 105px;
   padding: var(--padding-safe-button-pc);
-  background-color: var(--content-bg-color);
   color: white;
+  font-size: 14px;
+  background-color: var(--content-bg-color);
   cursor: pointer;
 }
 
@@ -218,7 +233,9 @@
   top: 0;
   left: 0;
   z-index: 1;
-  stroke: var(--content-bg-color); 
+  stroke: var(--content-bg-color);
+  inline-size: 18px;
+  block-size: 18px;
   /* при fill просто дискета пропадает */
   mix-blend-mode: difference;
 }
@@ -245,10 +262,10 @@
   padding-top: 0;
 }
 
-.card__text-desc {
+.card__image-container + p {
   margin-block-start: -4px;
   border-block-start: 2px solid var(--accent-color);
-} 
+}
 
 .card__image-container {
   position: relative;
@@ -260,15 +277,17 @@
   right: 2vw;
   z-index: 1;
   opacity: var(--label-opacity);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-shadow: 1px 1px var(--text-shadow-color);
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--text-shadow-color);
 }
 
-@supports (text-stroke: 0.5px var(--text-shadow-color)) {
+@supports (text-stroke: 0.5px var(--text-shadow-color)) or
+  (-webkit-text-stroke: 1px var(--text-shadow-color)) {
   .card__image-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-shadow-color);
     text-stroke: 0.5px var(--text-shadow-color);
   }
 }
@@ -304,27 +323,34 @@
 .dialog[open] {
   display: flex;
   flex-direction: column;
+  margin-block-end: 389px;
   padding: var(--padding-dialog);
+  opacity: 0.5;
+  block-size: 20vh;
+  inline-size: 37vh;
 }
 
 .dialog::backdrop {
   background-color: var(--backdrop-bg-color);
-  backdrop-filter: blur(7px);
   transition: backdrop-filter 1s ease;
-}
-
-.dialog[open]::backdrop {
-  backdrop-filter: 11px;
 }
 
 body:has(.dialog[open]) {
   overflow: hidden;
 }
 
+.dialog__svg {
+  inline-size: 38px;
+  block-size: 38px;
+}
+
 .dialog__title {
   padding-inline-start: 20px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  background-color: var(--text-button-color);
   max-inline-size: 234px;
 }
 
@@ -335,6 +361,9 @@ body:has(.dialog[open]) {
 }
 
 .dialog__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid var(--accent-color);
   padding: var(--padding-dialog-button);
   font-family: var(--accent-font), sans-serif;
@@ -346,5 +375,31 @@ body:has(.dialog[open]) {
   .card__safe-button {
     flex-direction: column;
     padding: var(--padding-safe-button-mb);
+  }
+
+  .header {
+    margin: 102px 0;
+    inline-size: 100%;
+  }
+
+  .container {
+    inline-size: 100%;
+  }
+
+  .card__safe-button .card__safe-button-svg {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .dialog__svg {
+    inline-size: 38px;
+    block-size: 38px;
+  }
+
+  .dialog[open] {
+    justify-content: center;
+    margin-block-end: 240px;
+    inline-size: 340px;
+    block-size: 195px;
   }
 }
