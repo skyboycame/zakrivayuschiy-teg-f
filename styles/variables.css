@@ -21,7 +21,9 @@
   --label-opacity: 0.5;
   --text-shadow-color: #fff;
   --padding-dialog: 30px;
-  --padding-dialog-button: 12.5px 0;
+  --padding-dialog-mb: 30px 42px;
+  --padding-dialog-button: 12.5px 132px;
+  --padding-dialog-button-mb: 10.5px 124px;
   --backdrop-bg-color: rgb(0 0 0 / 0.75);
   --to-left-gradiend: 90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px;
   --to-bottom-gradient: 180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px;

@@ -37,9 +37,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 112px 0;
+  margin: 112px 0 103px 0;
   border: 2px solid var(--accent-color);
-  padding: 128px var(--header-padding-r-l);
+  padding: 128px var(--header-padding-r-l) 128px var(--header-padding-r-l);
   font-family: var(--accent-font), fantasy;
   background-color: var(--content-bg-color);
 }
@@ -243,6 +243,7 @@
 .card__title {
   border-block-end: 2px solid var(--accent-color);
   padding: var(--padding-card-title-pc);
+  font-size: 18px;
   font-variation-settings: "wght" var(--main-font-weight-title);
 }
 
@@ -325,8 +326,6 @@
   flex-direction: column;
   margin-block-end: 389px;
   padding: var(--padding-dialog);
-  block-size: 20vh;
-  inline-size: 37vh;
 }
 
 .dialog::backdrop {
@@ -356,7 +355,7 @@ body:has(.dialog[open]) {
 .dialog__container {
   display: flex;
   align-items: center;
-  padding-block-end: 30px;
+  padding-block-end: 23px;
 }
 
 .dialog__button {
@@ -366,6 +365,7 @@ body:has(.dialog[open]) {
   border: 2px solid var(--accent-color);
   padding: var(--padding-dialog-button);
   font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -377,7 +377,8 @@ body:has(.dialog[open]) {
   }
 
   .header {
-    margin: 102px 0;
+    margin: 120px 0 102px 0;
+    padding: 119px var(--header-padding-r-l) 120px var(--header-padding-r-l);
     inline-size: 100%;
   }
 
@@ -391,14 +392,25 @@ body:has(.dialog[open]) {
   }
 
   .dialog__svg {
-    inline-size: 38px;
-    block-size: 38px;
+    scale: 2.5;
   }
 
   .dialog[open] {
     justify-content: center;
     margin-block-end: 240px;
-    inline-size: 340px;
-    block-size: 195px;
+    padding: var(--padding-dialog-mb);
+    overflow-x: hidden;
+  }
+
+  .dialog__title {
+    padding-inline-start: 35px;
+  }
+
+  .dialog__container {
+    padding-block-end: 28px;
+  }
+
+  .dialog__button {
+    padding: var(--padding-dialog-button-mb);
   }
 }
