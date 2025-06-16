@@ -37,7 +37,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 112px 0 103px 0;
+  margin: 112px 0 0 0;
   border: 2px solid var(--accent-color);
   padding: 128px var(--header-padding-r-l) 128px var(--header-padding-r-l);
   font-family: var(--accent-font), fantasy;
@@ -59,6 +59,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-block-start: 102px;
 }
 
 .lots__card-list-item {
@@ -106,7 +107,8 @@
 }
 
 .card__icon-button:focus-visible {
-  padding: 2.5px;
+  margin-inline-end: 4px;
+  padding: 1px;
   outline: 2px solid var(--accent-color);
   transition: outline 0.3s ease;
 }
@@ -257,6 +259,8 @@
 
 .card__text {
   padding: var(--padding-card-text);
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .card__text + p {
@@ -308,8 +312,7 @@
 .image-sepia {
   filter: sepia(80%);
 }
-
-.image-huerot {
+lots__card-list-item .image-huerot {
   filter: hue-rotate(20deg);
 }
 
@@ -324,8 +327,9 @@
 .dialog[open] {
   display: flex;
   flex-direction: column;
-  margin-block-end: 389px;
+  justify-content: center;
   padding: var(--padding-dialog);
+  transform: translateY(-8px);
 }
 
 .dialog::backdrop {
@@ -367,6 +371,7 @@ body:has(.dialog[open]) {
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   text-transform: uppercase;
+  transform: translateY(6px);
   cursor: pointer;
 }
 
@@ -377,9 +382,17 @@ body:has(.dialog[open]) {
   }
 
   .header {
-    margin: 120px 0 102px 0;
+    margin: 100px 0 101px 0;
     padding: 119px var(--header-padding-r-l) 120px var(--header-padding-r-l);
     inline-size: 100%;
+  }
+
+  .main {
+    margin-block-start: 0;
+  }
+
+  .lots__card-list-item:last-child {
+    margin-block-end: 49px;
   }
 
   .container {
@@ -392,14 +405,15 @@ body:has(.dialog[open]) {
   }
 
   .dialog__svg {
+    transform: translateX(2px);
     scale: 2.5;
   }
 
   .dialog[open] {
     justify-content: center;
-    margin-block-end: 240px;
     padding: var(--padding-dialog-mb);
     overflow-x: hidden;
+    transform: translateY(0);
   }
 
   .dialog__title {
@@ -412,5 +426,7 @@ body:has(.dialog[open]) {
 
   .dialog__button {
     padding: var(--padding-dialog-button-mb);
+    transform: translateX(-3px);
+    transform: translateY(0px);
   }
 }
