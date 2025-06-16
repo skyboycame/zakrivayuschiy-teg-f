@@ -426,7 +426,6 @@ body:has(.dialog[open]) {
 
   .dialog__button {
     padding: var(--padding-dialog-button-mb);
-    transform: translateX(-3px);
-    transform: translateY(0px);
+    transform: translateX(-3px) translateY(0px);
   }
 }
