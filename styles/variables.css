@@ -12,7 +12,7 @@
   --header-title-size: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
   --header-subtitle-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
   --header-padding-r-l: clamp(0.875rem, -1.0179rem + 9.4643vw, 7.5rem);
-  --padding-card-text: 25px;
+  --padding-card-text: 0 25px 25px 25px;
   --padding-card-title-pc: 3px 10px;
   --padding-card-title-mb: 6px 10px;
   --padding-like-button: 12.5px 37px 11.5px 37px;

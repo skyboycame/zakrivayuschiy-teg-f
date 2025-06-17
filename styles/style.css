@@ -37,7 +37,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 112px 0 0 0;
+  margin: 102px 0 0 0;
   border: 2px solid var(--accent-color);
   padding: 128px var(--header-padding-r-l) 128px var(--header-padding-r-l);
   font-family: var(--accent-font), fantasy;
@@ -412,7 +412,6 @@ body:has(.dialog[open]) {
   .dialog[open] {
     justify-content: center;
     padding: var(--padding-dialog-mb);
-    overflow-x: hidden;
     transform: translateY(0);
   }
 
