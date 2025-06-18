@@ -412,19 +412,21 @@ body:has(.dialog[open]) {
   .dialog[open] {
     justify-content: center;
     padding: var(--padding-dialog-mb);
+    opacity: 0.5;
     transform: translateY(0);
   }
 
   .dialog__title {
-    padding-inline-start: 35px;
+    padding-inline-start: 0;
   }
 
   .dialog__container {
-    padding-block-end: 28px;
+    gap: 35px;
+    padding-block-end: 37px;
   }
 
   .dialog__button {
     padding: var(--padding-dialog-button-mb);
-    transform: translateX(-3px) translateY(0px);
+    transform: translateX(-3px) translateY(-7px);
   }
 }
